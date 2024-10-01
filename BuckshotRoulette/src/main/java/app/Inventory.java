@@ -1,4 +1,5 @@
-import java.nio.file.attribute.UserDefinedFileAttributeView;
+package app;
+
 import java.util.*;
 
 public class Inventory {
@@ -32,7 +33,7 @@ public class Inventory {
     }
 
     /**
-     * used to generate Main.ITEMS_PER_ROUND items after every reload
+     * used to generate app.Main.ITEMS_PER_ROUND items after every reload
      */
     public void generateItems(int numItems) {
         Queue<String> q = new LinkedList<>();
@@ -55,7 +56,7 @@ public class Inventory {
 
     /**
      *
-     * @return the string representation of the Inventory
+     * @return the string representation of the app.Inventory
      */
     @Override
     public String toString() {
@@ -84,8 +85,8 @@ public class Inventory {
 
     /**
      *
-     * @param items is the predetermined array of items to be in the new Inventory
-     * @return an Inventory containing the predetermined items
+     * @param items is the predetermined array of items to be in the new app.Inventory
+     * @return an app.Inventory containing the predetermined items
      */
     protected static Inventory customInventory(String[] items) {
         Inventory inventory = new Inventory();

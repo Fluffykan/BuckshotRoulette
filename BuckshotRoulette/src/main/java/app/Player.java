@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
+package app;
 
 public abstract class Player {
     private String name;
@@ -87,7 +86,7 @@ public abstract class Player {
      * used to shoot the opposing player
      *
      * @param p is the opposing player
-     * @param gun is the gun used in Main
+     * @param gun is the gun used in app.Main
      * @return a boolean indicating whether a successful shot is made
      */
     public final boolean shoot(Player p, Gun gun) {
@@ -122,7 +121,7 @@ public abstract class Player {
      * used to allow the player to use an item
      *
      * @param i is the position of the item in the inventory
-     * @param gun is the gun used in Main
+     * @param gun is the gun used in app.Main
      * @param p is the opposing player
      * @return a boolean indicating if an item is successfully used
      */
@@ -186,9 +185,9 @@ public abstract class Player {
      * used to print out the inventory of the player
      */
     public final void viewInventory() {
-        System.out.printf("%s's Inventory\n", name);
+        System.out.printf("%s's app.Inventory\n", name);
         if (inventory == null) {
-            System.out.println("No Inventory");
+            System.out.println("No app.Inventory");
         } else {
             System.out.println(inventory);
         }

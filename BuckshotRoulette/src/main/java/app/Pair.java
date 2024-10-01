@@ -1,3 +1,5 @@
+package app;
+
 public class Pair<S, T> {
     private S s;
     private T t;

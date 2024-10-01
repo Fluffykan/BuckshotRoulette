@@ -1,3 +1,5 @@
+package app;
+
 public abstract class Dealer extends Player {
     public Dealer(String name, int health) {
         super(name, health, new DealerInventory());

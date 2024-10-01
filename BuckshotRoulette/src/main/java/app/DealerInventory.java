@@ -1,5 +1,5 @@
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
-import java.util.Arrays;
+package app;
+
 import java.util.LinkedList;
 import java.util.Queue;
 

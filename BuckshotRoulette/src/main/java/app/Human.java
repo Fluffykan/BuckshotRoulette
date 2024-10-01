@@ -1,3 +1,5 @@
+package app;
+
 import java.util.Scanner;
 
 public class Human extends Player{
@@ -50,12 +52,12 @@ public class Human extends Player{
             case 1:
                 System.out.println("Who to shoot?\n" +
                         "1. Yourself\n" +
-                        "2. Dealer\n\n" +
+                        "2. app.Dealer\n\n" +
                         "0. Cancel action");
                 while (!sc.hasNextInt()) {
                     System.out.println("Who to shoot?\n" +
                             "1. Yourself\n" +
-                            "2. Dealer\n\n" +
+                            "2. app.Dealer\n\n" +
                             "0. Cancel action");
                     sc.next();
                 }
