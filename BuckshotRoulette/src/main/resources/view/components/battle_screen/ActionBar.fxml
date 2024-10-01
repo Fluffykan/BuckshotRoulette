@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.ActionBarController">
+   <children>
+      <Button fx:id="shoot_dealer" mnemonicParsing="false" onAction="#shootDealer" prefWidth="100.0" text="SHOOT DEALER" />
+      <Button fx:id="shoot_self" mnemonicParsing="false" onAction="#shootSelf" prefWidth="100.0" text="SHOOT YOURSELF" />
+      <Button fx:id="cock" mnemonicParsing="false" onAction="#cock" prefWidth="100.0" text="COCK" />
+      <Button fx:id="use_item" mnemonicParsing="false" onAction="#showItemBar" prefWidth="100.0" text="USE ITEM" />
+      <Button fx:id="exit" mnemonicParsing="false" onAction="#quit" prefWidth="100.0" text="EXIT" />
+   </children>
+</HBox>

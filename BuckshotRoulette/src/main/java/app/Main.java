@@ -1,5 +1,5 @@
-import javax.annotation.processing.Filer;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+package app;
+
 import java.io.*;
 import java.util.Arrays;
 import java.util.Random;
@@ -10,7 +10,7 @@ public class Main {
     public static boolean roundEnded = false;
     public static int currRound = 1;
     private static StringBuilder log = new StringBuilder();
-    protected static Scanner sc = new Scanner(System.in); // to be used only within the package for Human
+    protected static Scanner sc = new Scanner(System.in); // to be used only within the package for app.Human
 
     // fields for the player, bot and gun
     private static Player bot = null;
@@ -43,11 +43,11 @@ public class Main {
             // Save File format:
             // 1. userName\n
             // 2. userHealth\n
-            // 3. userItemSlot1,userItemSlot2,...,userItemSlot(Inventory.INVENTORY_SIZE)\n
+            // 3. userItemSlot1,userItemSlot2,...,userItemSlot(app.Inventory.INVENTORY_SIZE)\n
             // 4. userHasAnotherTurn\n
             // 5. userIsHandcuffed\n
             // 6. botHealth\n
-            // 7. botItemSlot1,botItemSlot2,...,botItemSlot(Inventory.INVENTORY_SIZE)\n
+            // 7. botItemSlot1,botItemSlot2,...,botItemSlot(app.Inventory.INVENTORY_SIZE)\n
             // 8. botHasAnotherTurn\n
             // 9. botIsHandcuffed\n
             // 10. RELOAD_POINTER\n
@@ -104,11 +104,11 @@ public class Main {
         // Save File format:
         // 1. userName\n
         // 2. userHealth\n
-        // 3. userItemSlot1,userItemSlot2,...,userItemSlot(Inventory.INVENTORY_SIZE)\n
+        // 3. userItemSlot1,userItemSlot2,...,userItemSlot(app.Inventory.INVENTORY_SIZE)\n
         // 4. userHasAnotherTurn\n
         // 5. userIsHandcuffed\n
         // 6. botHealth\n
-        // 7. botItemSlot1,botItemSlot2,...,botItemSlot(Inventory.INVENTORY_SIZE)\n
+        // 7. botItemSlot1,botItemSlot2,...,botItemSlot(app.Inventory.INVENTORY_SIZE)\n
         // 8. botHasAnotherTurn\n
         // 9. botIsHandcuffed\n
         // 10. RELOAD_POINTER\n
@@ -219,7 +219,7 @@ public class Main {
             }
             String name = sc.next();
 
-            // initialise a new Human Player, bot and gun
+            // initialise a new app.Human app.Player, bot and gun
             user = Human.newHuman(name);
             user.drawItems();
             bot = HackerDealer.newHackerDealer();
@@ -230,7 +230,7 @@ public class Main {
         }
 
         while (currRound < MAX_ROUNDS) {
-            System.out.printf("\nRound %s\nHealth:\nDealer : %d\n%s : %d\n\n",
+            System.out.printf("\nRound %s\nHealth:\napp.Dealer : %d\n%s : %d\n\n",
                     currRound, bot.getHealth(), user.getName(), user.getHealth());
             roundEnded = false;
             // set the hasNextTurn field of user and bot to true
